@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="module">
+    function createButton(val) {
+      const btnEl = document.createElement('button');
+      btnEl.innerText = val;
+
+      btnEl.addEventListener('click', () => {
+        console.log(val);
+      });
+
+      document.body.append(btnEl);
+    }
+
+    createButton('Button 1');
+    createButton('Button 2');
+    createButton('Button 3');
+
+    // ^
+    // |
+    // |                                                             [lg]
+    // |for { [createButton] [createButton] [createButton] }         [=>]
+    // +-------------------------------------------------------------(click)-------------> temps
+
+  </script>
+</head>
+<body>
+  <!--
+    <button>Button 1</button>
+    <button>Button 2</button>
+    <button>Button 3</button>
+  -->
+</body>
+</html>
