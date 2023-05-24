@@ -10,6 +10,8 @@ console.log(Array instanceof Object); // true (une fonction est object en JS)
 
 // Le navigateur rajoute ses propres objets (API Web)
 console.log(typeof document); // object/undefined
+console.log(typeof window); // object/undefined
+console.log(typeof navigator); // object/undefined
 
 // Node rajoute ses propres objets
 console.log(typeof process); // object/undefined
