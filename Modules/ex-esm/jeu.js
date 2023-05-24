@@ -1,5 +1,6 @@
 import { createInterface } from 'node:readline';
 import { stdin, stdout } from 'node:process';
+import { getRandomInt } from './random.js';
 
 // Exercice importer la fonction getRandomInt
 // Exporter la classe Jeu seule
@@ -45,3 +46,5 @@ class Jeu {
     });
   }
 }
+
+export default Jeu;

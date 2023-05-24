@@ -1,5 +1,6 @@
 const { createInterface } = require('node:readline');
 const { stdin, stdout } = require('node:process');
+const { getRandomInt } = require('./random.js');
 
 // Exercice importer la fonction getRandomInt
 // Exporter la classe Jeu seule
@@ -45,3 +46,5 @@ class Jeu {
     });
   }
 }
+
+module.exports = Jeu;
