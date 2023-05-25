@@ -1,0 +1,19 @@
+<form>
+  <div>
+    Name : <input type="text" [value]="user.name" (input)="user.name = $any($event.target).value" />
+  </div>
+  <div>
+    Email : <input type="email" [value]="user.email" (input)="user.email = $any($event.target).value" />
+  </div>
+</form>
+
+<p>
+  Vous avez saisi : {{ user | json }}
+</p>
+
+
+<!--
+  inputEl.addEventListener('input', (event) => {
+    user.name = event.target.value;
+  });
+-->
