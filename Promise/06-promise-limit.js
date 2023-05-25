@@ -40,3 +40,8 @@ interval(1000)
 
     }
   });
+
+interval(1000)
+  .subscribe(() => {
+    console.log('1s interval');
+  });

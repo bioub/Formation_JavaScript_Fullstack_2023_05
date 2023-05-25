@@ -11,18 +11,32 @@ const app = express();
 //   res.end('Hello World');
 // });
 
+app.use((req, res, next) => {
+  console.log(req.method + ' ' + req.url);
+  next();
+});
+
 app.get('/', (req, res) => {
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hello World');
 });
 
-// app.post('/register', (req, res) => {});
-
-app.get('/api/hello', (req, res) => {
+app.post('/register', express.json(), (req, res) => {
+  console.log(req.body);
   res.json({
-    msg: 'Hello'
+    msg: 'User created',
   });
 });
+
+app.get('/api/hello/:name', (req, res) => {
+  // console.log(req.query.q); // ce qui suit ?q= dans l'URL
+
+  res.json({
+    msg: 'Hello ' + req.params.name
+  });
+});
+
+
 
 app.listen(port, hostname, () => {
   // eslint-disable-next-line no-console
