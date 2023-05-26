@@ -1,0 +1,11 @@
+<p>Color name : <input [value]="color" (input)="color = $any($event.target).value" /></p>
+
+<p style="border: 2px solid transparent;" [ngStyle]="{borderColor: color}" [ngClass]="{isMouseHover: hover}" (mouseenter)="hover = true" (mouseleave)="hover = false">
+  Selected color : {{ color }}
+</p>
+
+<!-- <ng-template [ngIf]="color">
+  <p>Is color selected</p>
+</ng-template> -->
+
+<p *ngIf="color">Is color selected</p>

@@ -1,0 +1,33 @@
+<form>
+  <input type="text" />
+  <button>+</button>
+</form>
+
+<div class="list">
+
+  <div class="item">
+    <input type="checkbox">
+    <span>ABC</span>
+    <button>-</button>
+  </div>
+
+  <div class="item">
+    <input type="checkbox">
+    <span>DEF</span>
+    <button>-</button>
+  </div>
+
+</div>
+<!--
+  Exercice Todos :
+  1 / Afficher le contenu de saisie dans le formulaire (dans l'input type text)
+  et écouter la saisie pour mettre à jour saisie (idem helloworld)
+  2 / Boucler sur le tableau todos
+  et afficher autant de <div class="item"> qu'il y a d'élément dans le tableau
+  la clé title s'affiche dans la balise span
+  la clé completed doit cocher la checkbox lorsqu'elle vaut true
+  3 / Ecouter l'évenement submit du formulaire
+  et appeler $event.preventDefault() pour le désactiver (pas nécessaire si vous avez chargé FormsModule)
+  Au submit de ce formulaire ajouter une todo au tableau en respectant les clés (_id (Math.random()), title (la saisie) et completed (false))
+  4 / Ecouter le click des bouton moins et supprimer la todo correspondante du tableau
+-->

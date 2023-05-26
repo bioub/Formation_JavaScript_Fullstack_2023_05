@@ -9,6 +9,10 @@ import { CounterComponent } from './counter/counter.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { ExHelloworldComponent } from './ex-helloworld/ex-helloworld.component';
 import { ExMultiStateButtonComponent } from './ex-multi-state-button/ex-multi-state-button.component';
+import { ShowColorComponent } from './show-color/show-color.component';
+import { ButtonGroupComponent } from './button-group/button-group.component';
+import { FormsModule } from '@angular/forms';
+import { ExTodosComponent } from './ex-todos/ex-todos.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +22,14 @@ import { ExMultiStateButtonComponent } from './ex-multi-state-button/ex-multi-st
     CounterComponent,
     UserFormComponent,
     ExHelloworldComponent,
-    ExMultiStateButtonComponent
+    ExMultiStateButtonComponent,
+    ShowColorComponent,
+    ButtonGroupComponent,
+    ExTodosComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
