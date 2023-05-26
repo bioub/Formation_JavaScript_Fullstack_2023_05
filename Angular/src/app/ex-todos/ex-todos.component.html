@@ -1,20 +1,14 @@
-<form>
-  <input type="text" />
+<form (submit)="save($event)">
+  <input type="text" [value]="saisie" (input)="saisie = $any($event.target).value" />
   <button>+</button>
 </form>
 
 <div class="list">
 
-  <div class="item">
-    <input type="checkbox">
-    <span>ABC</span>
-    <button>-</button>
-  </div>
-
-  <div class="item">
-    <input type="checkbox">
-    <span>DEF</span>
-    <button>-</button>
+  <div class="item" *ngFor="let todo of todos">
+    <input type="checkbox" [checked]="todo.completed">
+    <span>{{todo.title}}</span>
+    <button (click)="delete(todo)">-</button>
   </div>
 
 </div>
@@ -30,4 +24,16 @@
   et appeler $event.preventDefault() pour le désactiver (pas nécessaire si vous avez chargé FormsModule)
   Au submit de ce formulaire ajouter une todo au tableau en respectant les clés (_id (Math.random()), title (la saisie) et completed (false))
   4 / Ecouter le click des bouton moins et supprimer la todo correspondante du tableau
+-->
+
+
+<!--
+  Exercice
+  1 / Créer une route /todos qui affichera le composant ExTodosComponent
+  et ajouter un lien dans la balise nav de app.component.html
+  2 / Démarrer le serveur Express
+  Au chargement du component ExTodosComponent (dans le constructeur)
+  envoyer la requete vers http://localhost:3000/api/todos
+  et stocker le retour du serveur dans le tableau (le composant va se raffraichir tout seul)
+  Bonus / Faire de même pour la création de todos et la suppression de todos.
 -->

@@ -1,0 +1,11 @@
+<p>home works!</p>
+
+<h2>API Adresse Data.Gouv</h2>
+<form (submit)="search($event)">
+  <input type="text" [value]="saisie" (input)="saisie = $any($event.target).value">
+  <button>Search</button>
+</form>
+
+<div>
+  Adresse formatée : {{ formatedAddress }}
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Todo } from './todo.model';
 
 @Component({
   selector: 'app-ex-todos',
@@ -7,16 +8,31 @@ import { Component } from '@angular/core';
 })
 export class ExTodosComponent {
   saisie = 'ABC';
-  todos = [
-    {
-      _id: 1,
-      title: 'GHI',
-      completed: false,
-    },
-    {
-      _id: 2,
-      title: 'XYZ',
-      completed: true,
-    }
+  todos: Todo[] = [
+    // {
+    //   _id: 1,
+    //   title: 'GHI',
+    //   completed: false,
+    // },
+    // {
+    //   _id: 2,
+    //   title: 'XYZ',
+    //   completed: true,
+    // }
   ]
+
+  save(event: SubmitEvent) {
+    event.preventDefault();
+    this.todos.push({
+      _id: Math.random(),
+      title: this.saisie,
+      completed: false,
+    });
+    this.saisie = '';
+  }
+
+  delete(todo: Todo) {
+    const indexToDelete = this.todos.indexOf(todo);
+    this.todos.splice(indexToDelete, 1);
+  }
 }

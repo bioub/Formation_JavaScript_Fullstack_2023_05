@@ -13,6 +13,9 @@ import { ShowColorComponent } from './show-color/show-color.component';
 import { ButtonGroupComponent } from './button-group/button-group.component';
 import { FormsModule } from '@angular/forms';
 import { ExTodosComponent } from './ex-todos/ex-todos.component';
+import { HomeComponent } from './home/home.component';
+import { ExamplesComponent } from './examples/examples.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,10 +29,13 @@ import { ExTodosComponent } from './ex-todos/ex-todos.component';
     ShowColorComponent,
     ButtonGroupComponent,
     ExTodosComponent,
+    HomeComponent,
+    ExamplesComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
