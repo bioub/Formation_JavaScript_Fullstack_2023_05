@@ -15,4 +15,9 @@ export class ExMultiStateButtonComponent {
   Au clic de ce bouton afficher la prochaine valeur du tableau (si No -> Maybe)
   Arrivé en bout de tableau afficher le premier élement (si Maybe -> Yes)
   */
+  next() {
+    const currentIndex = this.choices.indexOf(this.currentValue);
+    const nextIndex = (currentIndex + 1) % this.choices.length;
+    this.currentValue = this.choices[nextIndex];
+  }
 }

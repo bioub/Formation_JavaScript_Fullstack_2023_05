@@ -1,8 +1,8 @@
 <div>
   <label>Name:</label>
-  <input type="text" placeholder="Enter a name here">
+  <input type="text" [value]="yourName" (input)="yourName = $any($event.target).value">
   <hr>
-  <h1>Hello LE_NOM_A_AFFICHER!</h1>
+  <h1>Hello {{ yourName }}!</h1>
 </div>
 
 <!--
